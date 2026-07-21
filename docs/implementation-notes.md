@@ -1,18 +1,16 @@
 # Implementation Notes
 
-Project: logsentinel-lite
+## Architecture
 
-## Good next changes
+- `analyzer.py`: pattern validation, file analysis, severity classification, redaction
+- `cli.py`: arguments, text/JSON rendering, exit codes
+- `tests/`: analyzer behavior, configuration validation, CLI behavior
 
-- Add a zero-dependency system metrics helper.
-- Add tests for report formatting.
-- Add sample JSON output.
-- Add a simple CLI entrypoint.
-- Add security checks before publishing.
+## Design rules
 
-## Rules
-
-- Keep changes small.
-- Do not add secrets.
-- Do not use copied code.
-- Do not add fake progress.
+- Standard-library runtime dependencies only
+- No network calls or log uploads
+- Redaction enabled by default
+- One highest-severity finding per line
+- Fake sample data only
+- No claims for unimplemented features

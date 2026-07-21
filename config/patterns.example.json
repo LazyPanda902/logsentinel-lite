@@ -1,0 +1,15 @@
+{
+  "include_defaults": true,
+  "patterns": [
+    {
+      "name": "database-lock",
+      "severity": "warning",
+      "regex": "\\bdatabase (?:is )?locked\\b"
+    },
+    {
+      "name": "malware-signal",
+      "severity": "critical",
+      "regex": "\\bmalware detected\\b"
+    }
+  ]
+}

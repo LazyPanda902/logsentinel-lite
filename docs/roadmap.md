@@ -1,19 +1,19 @@
 # Roadmap
 
-## Project
+## Completed in v0.1
 
-logsentinel-lite
+- Local text-log scanning
+- Built-in and custom patterns
+- Text and JSON output
+- Sensitive-value redaction
+- Unit tests
+- Python 3.11 and 3.12 CI
 
-## Goal
+## Possible future work
 
-Build a small, practical portfolio project around:
-
-IT support automation
-
-## Milestones
-
-- Keep setup instructions clear
-- Add useful examples
-- Add tests where practical
-- Keep sample data fake
-- Keep security notes visible
+- Optional tail mode
+- JSON-lines input
+- Finding allowlists
+- Saved report files
+- Rule-level counters
+- Windows Event Log and Linux journal export examples
