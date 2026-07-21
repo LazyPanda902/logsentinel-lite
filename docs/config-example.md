@@ -1,23 +1,14 @@
-# Config Example
+# Configuration Example
 
-Project: logsentinel-lite
+LogSentinel Lite uses optional JSON pattern configuration.
 
-This is a safe sample config. Do not store secrets here.
+See `config/patterns.example.json`.
 
-```yaml
-monitoring:
-  root_path: "/"
-  warning_disk_percent: 80
-  critical_disk_percent: 90
+Each rule requires:
 
-reporting:
-  output_format: "json"
-  include_load_average: true
-  include_disk_usage: true
-```
+- `name`
+- `severity`: `warning`, `error`, or `critical`
+- `regex`: a Python-compatible regular expression
 
-## Privacy rules
-
-- Do not include real private hostnames.
-- Do not include private IP addresses.
-- Do not include tokens, passwords, or `.env` values.
+Do not place passwords, tokens, private hostnames, customer data, or real
+production logs in configuration examples.

@@ -1,0 +1,5 @@
+2026-01-01T00:00:00Z INFO service started successfully
+2026-01-01T00:02:00Z WARNING disk usage is degraded
+2026-01-01T00:03:00Z ERROR authentication failed for demo@example.test from 192.0.2.25 token=fake-demo-token
+2026-01-01T00:04:00Z INFO retry completed successfully
+2026-01-01T00:05:00Z CRITICAL backup verification failed
