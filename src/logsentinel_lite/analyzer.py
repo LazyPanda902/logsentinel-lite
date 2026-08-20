@@ -4,10 +4,10 @@ from __future__ import annotations
 
 import json
 import re
+from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Iterable, Sequence
 
 SEVERITY_RANK = {"ok": 0, "warning": 1, "error": 2, "critical": 3}
 
@@ -61,7 +61,7 @@ class PatternRule:
 
 def _compile_rule(item: object) -> PatternRule:
     if not isinstance(item, dict):
-        raise ValueError("Each pattern must be a JSON object.")
+        raise TypeError("Each pattern must be a JSON object.")
 
     name = item.get("name")
     severity = item.get("severity")

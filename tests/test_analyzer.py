@@ -42,8 +42,8 @@ def test_only_highest_severity_is_recorded_per_line():
 def test_sensitive_values_are_redacted():
     report = analyze_lines(
         [
-            "ERROR login failed for user@example.test "
-            "from 192.0.2.10 token=demo-secret\n"
+            ("ERROR login failed for user@example.test "
+            "from 192.0.2.10 token=demo-secret\n")
         ],
         source="sample.log",
         patterns=load_patterns(),
